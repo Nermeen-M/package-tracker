@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { getData } from "./scripts/storeData";
 
 import Home from "./Pages/Home";
-import PackageTracking from "./Pages/PackageTracking";
+import PackageInformation from "./Pages/PackageInformation";
 
 export default function App() {
   const [packages, setPackages] = useState([]);
@@ -21,7 +21,10 @@ export default function App() {
       <h1>Package tracker</h1>
       <Routes>
         <Route path="/" element={<Home packages={packages} />} exact />
-        <Route path="/packages/:packageId" element={<PackageTracking />} />
+        <Route
+          path="/packages/:packageId"
+          element={<PackageInformation packages={packages} />}
+        />
         {/* <Route path="/profile" element={<Profile />} /> */}
       </Routes>
     </div>

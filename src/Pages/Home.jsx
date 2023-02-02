@@ -1,10 +1,8 @@
-import Packages from "../components/Packages";
+import PackageItem from "../components/PackageItem";
 
 export default function Home({ packages }) {
-  return (
-    <div>
-      Home
-      <Packages packages={packages} />
-    </div>
-  );
+  const packagesList = packages.map((item) => (
+    <PackageItem item={item} key={item.id} />
+  ));
+  return <div>{packagesList}</div>;
 }
