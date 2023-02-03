@@ -17,7 +17,7 @@
 /* Other */
 :root {
   --box-shadow: 0 4px 10px rgb(0 0 0 / 25%);
-  --footer-shadow: 0 -4px 10px rgb(0 0 0 / 25%);
+  --footer-box-shadow: 0 -4px 10px rgb(0 0 0 / 25%);
   --transition: 0.3s ease-in-out;
   --border: 1px solid var(--color-gray);
   --border-radius: 20px;

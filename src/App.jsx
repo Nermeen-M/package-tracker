@@ -6,6 +6,7 @@ import { getData } from "./scripts/storeData";
 import Header from "./components/layout/Header";
 import Home from "./Pages/Home";
 import PackageInformation from "./Pages/PackageInformation";
+import Footer from "./components/layout/Footer";
 
 import "./assets/styles/style.css";
 
@@ -30,6 +31,7 @@ export default function App() {
         />
         {/* <Route path="/profile" element={<Profile />} /> */}
       </Routes>
+      <Footer />
     </div>
   );
 }
