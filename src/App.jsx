@@ -6,6 +6,8 @@ import { getData } from "./scripts/storeData";
 import Home from "./Pages/Home";
 import PackageInformation from "./Pages/PackageInformation";
 
+import "./assets/styles/style.css";
+
 export default function App() {
   const [packages, setPackages] = useState([]);
   useEffect(() => {
