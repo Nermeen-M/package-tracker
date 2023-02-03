@@ -19,37 +19,38 @@ export default function PackageDetails({ parcel }) {
     last_updated,
   } = parcel;
   return (
-    <div>
-      <div>{location_name}</div>
-      <div>
+    <section>
+      <div className="header">
         <h2>{sender}</h2>
-        <span>{parcel_id}</span>
+        <h3>{parcel_id}</h3>
       </div>
-      <span>{status}</span>
-      <span>
-        <FontAwesomeIcon icon={faClock} />
-        {last_updated}
-      </span>
-      <span>
-        <FontAwesomeIcon icon={faLocationDot} />
-        {location_name}
-      </span>
-      <span>
-        <FontAwesomeIcon icon={faCalendarDays} />
-        {eta}
-      </span>
-      {notes && (
+      <h3>{status}</h3>
+      <div className="info-items">
         <span>
-          <FontAwesomeIcon icon={faComment} />
-          {notes}
+          <FontAwesomeIcon icon={faClock} />
+          {last_updated}
         </span>
-      )}
-      {verification_required && (
         <span>
-          <FontAwesomeIcon icon={faExclamation} />
-          Be sure to show your valid ID.
+          <FontAwesomeIcon icon={faLocationDot} />
+          {location_name}
         </span>
-      )}
-    </div>
+        <span>
+          <FontAwesomeIcon icon={faCalendarDays} />
+          {eta}
+        </span>
+        {notes && (
+          <span>
+            <FontAwesomeIcon icon={faComment} />
+            {notes}
+          </span>
+        )}
+        {verification_required && (
+          <span>
+            <FontAwesomeIcon icon={faExclamation} />
+            Be sure to show your valid ID.
+          </span>
+        )}
+      </div>
+    </section>
   );
 }

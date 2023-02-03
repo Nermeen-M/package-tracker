@@ -8,5 +8,6 @@
 @import "./components/Header.css";
 @import "./components/Home.css";
 @import "./components/PackageItem.css";
+@import "./components/PackageInformation.css";
 @import "./components/Map.css";
 @import "./components/Footer.css";

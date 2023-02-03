@@ -8,13 +8,21 @@ export default function PackageInformation({ packages }) {
   const parcel = packages.find((item) => item.id == params.packageId);
   const { location_coordinate_latitude, location_coordinate_longitude } =
     parcel;
+
+  const image = require("../assets/images/package-information.png");
+
   return (
-    <div>
-      <PackageDetails parcel={parcel} />
-      <MapWrapper
-        lat={location_coordinate_latitude}
-        lng={location_coordinate_longitude}
-      />
-    </div>
+    <main id="package-info">
+      <div className="banner">
+        <img src={image} alt="Opened boxes" />
+      </div>
+      <div className="package-details">
+        <PackageDetails parcel={parcel} />
+        <MapWrapper
+          lat={location_coordinate_latitude}
+          lng={location_coordinate_longitude}
+        />
+      </div>
+    </main>
   );
 }
