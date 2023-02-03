@@ -16,6 +16,10 @@
   color: var(--color-green);
 }
 
+#home .packages h2 {
+  margin: var(--space-medium) 0;
+}
+
 #home .packages .list {
   display: flex;
   flex-direction: column;

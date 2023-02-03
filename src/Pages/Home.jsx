@@ -1,7 +1,11 @@
 import Hero from "../components/Hero";
 import PackageItem from "../components/PackageItem";
 
-export default function Home({ packages }) {
+import { usePackages } from "../state/PackagesContext";
+
+export default function Home() {
+  const { packages } = usePackages();
+
   const packagesList = packages.map((item) => (
     <PackageItem item={item} key={item.id} />
   ));

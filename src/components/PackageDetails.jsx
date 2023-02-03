@@ -1,4 +1,6 @@
+import { useParams } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import moment from "moment";
 import {
   faCalendarDays,
   faLocationDot,
@@ -6,8 +8,13 @@ import {
   faComment,
   faExclamation,
 } from "@fortawesome/free-solid-svg-icons";
+import { usePackages } from "../state/PackagesContext";
 
-export default function PackageDetails({ parcel }) {
+export default function PackageDetails() {
+  const params = useParams();
+  const { getPackageById } = usePackages();
+  const parcel = getPackageById(params.packageId);
+
   const {
     status,
     eta,
@@ -18,6 +25,7 @@ export default function PackageDetails({ parcel }) {
     notes,
     last_updated,
   } = parcel;
+
   return (
     <section>
       <div className="header">
