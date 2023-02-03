@@ -1,6 +1,6 @@
 import { useParams } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import moment from "moment";
+import moment from "moment";
 import {
   faCalendarDays,
   faLocationDot,
@@ -14,8 +14,9 @@ export default function PackageDetails() {
   const params = useParams();
   const { getPackageById } = usePackages();
   const parcel = getPackageById(params.packageId);
+  console.log(moment().format("MMMM Do YYYY, h:mm:ss a"));
 
-  const {
+  var {
     status,
     eta,
     parcel_id,
@@ -25,6 +26,9 @@ export default function PackageDetails() {
     notes,
     last_updated,
   } = parcel;
+
+  eta = moment(eta).format("lll");
+  last_updated = moment(last_updated).format("lll");
 
   return (
     <section>
