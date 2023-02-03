@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import MapWrapper from "../components/MapWrapper";
 
 export default function PackageInformation({ packages }) {
   const params = useParams();
@@ -12,12 +13,18 @@ export default function PackageInformation({ packages }) {
     location_name,
     notes,
     last_updated,
+    location_coordinate_latitude,
+    location_coordinate_longitude,
   } = product;
-  console.log(product);
 
   return (
     <div>
-      Package Information
+      <h2>Package Information</h2>
+      <MapWrapper
+        lat={location_coordinate_latitude}
+        lng={location_coordinate_longitude}
+      />
+      <div>{location_name}</div>
       <div>
         <h2>{sender}</h2>
         <span>{parcel_id}</span>
