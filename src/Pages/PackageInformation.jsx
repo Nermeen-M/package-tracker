@@ -11,7 +11,6 @@ export default function PackageInformation() {
   const { packages } = usePackages();
   const params = useParams();
   const parcel = packages.find((item) => item.id == params.packageId);
-
   const { location_coordinate_latitude, location_coordinate_longitude } =
     parcel;
 

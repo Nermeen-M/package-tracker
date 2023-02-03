@@ -1,22 +1,15 @@
 import { useState, useEffect, createContext, useContext } from "react";
 
-// import CategoriesData from "../data/categories.json";
-
 const PackagesContext = createContext(null);
 
 export function PackagesProvider(props) {
   const [packages, setPackages] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
-  //   const packages = CategoriesData;
 
   const url = "https://my.api.mockaroo.com/insta-orders.json?key=e49e6840";
-  useEffect(() => {
-    // getData(url).then((response) => {
-    //   setPackages(response);
-    //   localStorage.setItem("storedPackages", JSON.stringify(response));
-    // });
 
+  useEffect(() => {
     async function init() {
       try {
         const response = await fetch(url);

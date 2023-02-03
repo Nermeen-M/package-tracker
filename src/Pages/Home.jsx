@@ -5,10 +5,10 @@ import { usePackages } from "../state/PackagesContext";
 
 export default function Home() {
   const { packages } = usePackages();
-
   const packagesList = packages.map((item) => (
     <PackageItem item={item} key={item.id} />
   ));
+
   return (
     <main id="home">
       <Hero />
