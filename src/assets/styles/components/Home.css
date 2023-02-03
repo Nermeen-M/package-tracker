@@ -1,7 +1,21 @@
-#home {
+#home .hero {
+  height: calc(100vh - 80px);
+  box-shadow: var(--box-shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-x-large);
+  padding: var(--space-large);
 }
-#home .packages {
+#home .hero img {
+  height: 240px;
 }
+#home .hero h1 {
+  color: var(--color-green);
+}
+
 #home .packages .list {
   display: flex;
   flex-direction: column;

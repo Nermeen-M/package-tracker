@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
-export default function PackageItem({ item }) {
-  const image = require("../assets/images/truck.png");
+import image from "../assets/images/truck.png";
 
+export default function PackageItem({ item }) {
   return (
     <Link to={`/packages/${item.id}`} className="package-item">
       <span className="icon">

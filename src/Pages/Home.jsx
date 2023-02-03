@@ -1,3 +1,4 @@
+import Hero from "../components/Hero";
 import PackageItem from "../components/PackageItem";
 
 export default function Home({ packages }) {
@@ -6,7 +7,7 @@ export default function Home({ packages }) {
   ));
   return (
     <main id="home">
-      <section className="Hero">Hero</section>
+      <Hero />
       <section className="packages">
         <div className="container">
           <h2>Packages</h2>

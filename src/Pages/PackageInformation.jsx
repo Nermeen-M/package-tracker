@@ -3,13 +3,13 @@ import { useParams } from "react-router-dom";
 import PackageDetails from "../components/PackageDetails";
 import MapWrapper from "../components/MapWrapper";
 
+import image from "../assets/images/package-information.png";
+
 export default function PackageInformation({ packages }) {
   const params = useParams();
   const parcel = packages.find((item) => item.id == params.packageId);
   const { location_coordinate_latitude, location_coordinate_longitude } =
     parcel;
-
-  const image = require("../assets/images/package-information.png");
 
   return (
     <main id="package-info">
