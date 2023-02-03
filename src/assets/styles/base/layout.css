@@ -7,8 +7,12 @@ html {
   color: var(--color-white);
 }
 
+.App {
+  background-color: var(--color-dark-gray);
+}
+
 .container {
-  padding: var(--space-x-large);
+  padding: var(--space-medium);
 }
 
 @media (min-width: 1280px) {

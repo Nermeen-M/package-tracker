@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 
 import { getData } from "./scripts/storeData";
 
+import Header from "./components/layout/Header";
 import Home from "./Pages/Home";
 import PackageInformation from "./Pages/PackageInformation";
 
@@ -20,7 +21,7 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1>Package tracker</h1>
+      <Header />
       <Routes>
         <Route path="/" element={<Home packages={packages} />} exact />
         <Route
