@@ -27,8 +27,6 @@ export function PackagesProvider(props) {
         var storedPackages = localStorage.getItem("instaPacket_storedPackages");
         if (storedPackages != null) {
           setPackages(JSON.parse(storedPackages));
-        } else {
-          setError(e);
         }
         setError(e);
       } finally {
