@@ -40,4 +40,5 @@
 
 .package-item .text span {
   color: var(--color-green);
+  text-transform: capitalize;
 }

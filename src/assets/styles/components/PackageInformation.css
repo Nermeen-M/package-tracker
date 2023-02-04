@@ -28,6 +28,9 @@
 .package-details .header h3 {
   color: var(--color-dark-gray);
 }
+.package-details .header ~ h3 {
+  text-transform: capitalize;
+}
 .package-details .info-items {
   display: flex;
   flex-direction: column;

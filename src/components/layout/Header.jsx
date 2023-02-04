@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 import logo from "../../assets/images/logo.png";
 
@@ -11,8 +13,9 @@ export default function Header() {
           alt="Logo contains a green open box and application name"
         />
       </Link>
-
-      {/* <span>Welcome</span> */}
+      <Link to="/profile">
+        <FontAwesomeIcon icon={faUser} />
+      </Link>
     </header>
   );
 }

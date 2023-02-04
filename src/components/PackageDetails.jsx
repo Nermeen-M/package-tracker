@@ -9,14 +9,14 @@ import {
   faExclamation,
 } from "@fortawesome/free-solid-svg-icons";
 import { usePackages } from "../state/PackagesContext";
+import { removeDashes } from "../scripts/helperFunctions";
 
 export default function PackageDetails() {
   const params = useParams();
   const { getPackageById } = usePackages();
   const parcel = getPackageById(params.packageId);
-  console.log(moment().format("MMMM Do YYYY, h:mm:ss a"));
 
-  var {
+  const {
     status,
     eta,
     parcel_id,
@@ -27,8 +27,8 @@ export default function PackageDetails() {
     last_updated,
   } = parcel;
 
-  eta = moment(eta).format("lll");
-  last_updated = moment(last_updated).format("lll");
+  const modifiedEta = moment(eta).format("lll");
+  const modifiedLastUpdated = moment(last_updated).format("lll");
 
   return (
     <section>
@@ -36,11 +36,11 @@ export default function PackageDetails() {
         <h2>{sender}</h2>
         <h3>{parcel_id}</h3>
       </div>
-      <h3>{status}</h3>
+      <h3>{removeDashes(status)}</h3>
       <div className="info-items">
         <span>
           <FontAwesomeIcon icon={faClock} />
-          {last_updated}
+          {modifiedLastUpdated}
         </span>
         <span>
           <FontAwesomeIcon icon={faLocationDot} />
@@ -48,7 +48,7 @@ export default function PackageDetails() {
         </span>
         <span>
           <FontAwesomeIcon icon={faCalendarDays} />
-          {eta}
+          ETA: {modifiedEta}
         </span>
         {notes && (
           <span>

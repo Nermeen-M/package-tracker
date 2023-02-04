@@ -1,0 +1,21 @@
+#profile {
+  min-height: calc(100vh - 160px);
+}
+#profile h1 {
+  margin: var(--space-large);
+}
+
+#profile div {
+  margin: var(--space-large);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  padding: var(--space-x-large);
+}
+
+#profile div span {
+  font-size: 22px;
+}
+
+#profile div span:first-child {
+  color: var(--color-green);
+}

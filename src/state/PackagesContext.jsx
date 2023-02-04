@@ -43,7 +43,12 @@ export function PackagesProvider(props) {
     return parcel;
   }
 
-  const contextValue = { packages, error, loading, getPackageById };
+  const contextValue = {
+    packages,
+    error,
+    loading,
+    getPackageById,
+  };
 
   return (
     <PackagesContext.Provider value={contextValue}>

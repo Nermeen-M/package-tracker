@@ -19,12 +19,14 @@ export default function PackageInformation() {
       <div className="banner">
         <img src={image} alt="Opened boxes" />
       </div>
-      <div className="package-details">
-        <PackageDetails />
-        <MapWrapper
-          lat={location_coordinate_latitude}
-          lng={location_coordinate_longitude}
-        />
+      <div className="container">
+        <div className="package-details">
+          <PackageDetails />
+          <MapWrapper
+            lat={location_coordinate_latitude}
+            lng={location_coordinate_longitude}
+          />
+        </div>
       </div>
     </main>
   );
