@@ -11,6 +11,7 @@ import {
 import { usePackages } from "../state/PackagesContext";
 import { removeDashes } from "../scripts/helperFunctions";
 
+// this component is too long
 export default function PackageDetails() {
   const params = useParams();
   const { getPackageById } = usePackages();
@@ -38,6 +39,8 @@ export default function PackageDetails() {
       </div>
       <h3>{removeDashes(status)}</h3>
       <div className="info-items">
+        {/* DRY, you could make a component called ItemDetails or similar */}
+        {/* Put the icons import there and make it 1 line over here */}
         <span>
           <FontAwesomeIcon icon={faClock} />
           {modifiedLastUpdated}

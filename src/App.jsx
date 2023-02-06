@@ -11,12 +11,14 @@ import { usePackages } from "./state/PackagesContext";
 
 import "./assets/styles/style.css";
 
+// Pages/ folder should be lowercase pages/
 export default function App() {
   const { error, loading } = usePackages();
 
   return (
     <div className="App">
       <Header />
+      {/* this is great, i will teach how to make it cleaner as the loading should not be inside the jsx, but outside */}
       {loading && <LoadingScreen />}
       {error && <p>{error}</p>}
       <div>

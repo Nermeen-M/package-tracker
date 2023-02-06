@@ -1,5 +1,6 @@
 import { usePackages } from "../state/PackagesContext";
 
+// acceptable (those divs do not convice me, something more semantic should exist)
 export default function Profile() {
   const { packages } = usePackages();
 

@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { GoogleMap, MarkerF } from "@react-google-maps/api";
 
+// great
 export default function Map({ lat, lng }) {
   const centerPosition = useMemo(() => ({ lat: lat, lng: lng }), []);
 

@@ -1,5 +1,6 @@
 import image from "../assets/images/hero.png";
 
+// good
 export default function Hero() {
   return (
     <section className="hero">

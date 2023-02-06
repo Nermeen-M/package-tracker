@@ -7,6 +7,7 @@ import { usePackages } from "../state/PackagesContext";
 
 import image from "../assets/images/package-information.png";
 
+// great
 export default function PackageInformation() {
   const { packages } = usePackages();
   const params = useParams();

@@ -6,6 +6,7 @@ import { removeDashes } from "../scripts/helperFunctions";
 
 import image from "../assets/images/truck.png";
 
+// good
 export default function PackageItem({ item }) {
   const modiefiedStatus = removeDashes(item.status);
   return (

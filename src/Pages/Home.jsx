@@ -3,6 +3,7 @@ import PackageItem from "../components/PackageItem";
 
 import { usePackages } from "../state/PackagesContext";
 
+// good
 export default function Home() {
   const { packages } = usePackages();
   const packagesList = packages.map((item) => (
